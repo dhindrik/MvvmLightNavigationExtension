@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>MvvmLightNavigationExtension.Sample.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>MvvmLightNavigationExtensionSampleiOS</AssemblyName>
+    <AssemblyName>SampleiOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -144,9 +144,9 @@
       <IsAppExtension>false</IsAppExtension>
       <IsWatchApp>false</IsWatchApp>
     </ProjectReference>
-    <ProjectReference Include="..\MvvmLightNavigationExtension.Sample\MvvmLightNavigationExtension.Sample.csproj">
+    <ProjectReference Include="..\MvvmLightNavigationExtension.Sample\Sample.csproj">
       <Project>{e77c017d-cba6-4eed-9c89-93cb8d605086}</Project>
-      <Name>MvvmLightNavigationExtension.Sample</Name>
+      <Name>Sample</Name>
     </ProjectReference>
     <ProjectReference Include="..\MvvmLightNavigation\MvvmLightNavigation\MvvmLightNavigationExtension.csproj">
       <Project>{e479f480-0834-482d-ac0b-17de833b925f}</Project>

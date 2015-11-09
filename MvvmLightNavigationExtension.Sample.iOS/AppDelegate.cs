@@ -32,7 +32,7 @@ namespace MvvmLightNavigationExtension.Sample.iOS
 
             var builder = new ContainerBuilder();
             builder.RegisterInstance<INavigationService>(nav);
-            builder.RegisterInstance<INavigationExtension>(nav);
+            builder.RegisterInstance<INavigationServiceExtension>(nav);
 
             var container = builder.Build();
 

@@ -8,7 +8,7 @@ using UIKit;
 
 namespace MvvmLightNavigationExtension.iOS
 {
-    public class NavigationServiceExtension : NavigationService, INavigationExtension
+    public class NavigationServiceExtension : NavigationService, INavigationServiceExtension
     {
         private Dictionary<string, string> _pageKeys = new Dictionary<string, string>();
 

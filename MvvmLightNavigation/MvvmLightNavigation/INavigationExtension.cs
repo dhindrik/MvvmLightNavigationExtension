@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MvvmLightNavigationExtension
 {
-    public interface INavigationExtension
+    public interface INavigationServiceExtension
     {
         void OpenModal(string key);
         void CloseModal();
