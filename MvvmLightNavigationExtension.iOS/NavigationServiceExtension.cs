@@ -12,11 +12,17 @@ namespace MvvmLightNavigationExtension.iOS
     {
         private Dictionary<string, string> _pageKeys = new Dictionary<string, string>();
 
+       public new void Initialize(UINavigationController navigation)
+       {
+            base.Initialize(navigation);
+
+            MvvmLightNavigationExtension.NavigationServiceExtension.Current = this;
+       }
+
         public void OpenModal(string key)
         {
+
             var navigationController = UIApplication.SharedApplication.Windows[0].RootViewController;
-        
-            var navigationService = (NavigationServiceExtension)ServiceLocator.Current.GetInstance<INavigationService>();
           
             var viewController = navigationController.Storyboard.InstantiateViewController(_pageKeys[key]);
 

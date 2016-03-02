@@ -17,6 +17,11 @@ namespace MvvmLightNavigationExtension.Droid
     {
         private Dictionary<string, Type> _pageKeys = new Dictionary<string, Type>();
 
+        public void Initialize()
+        {
+            MvvmLightNavigationExtension.NavigationServiceExtension.Current = this;
+        }
+
         public void CloseModal()
         {
 			ActivityBase.CurrentActivity.Finish ();

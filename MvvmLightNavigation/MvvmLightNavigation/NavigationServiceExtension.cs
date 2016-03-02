@@ -10,18 +10,16 @@ namespace MvvmLightNavigationExtension
 {
     public static class NavigationServiceExtension
     {
+        public static INavigationServiceExtension Current { get; set; }
+
         public static void OpenModal(this INavigationService navigationService, string key)
         {
-            var extension = ServiceLocator.Current.GetInstance<INavigationServiceExtension>();
-
-            extension.OpenModal(key);
+            Current.OpenModal(key);
         }
 
         public static void CloseModal(this INavigationService navigationService)
         {
-            var extension = ServiceLocator.Current.GetInstance<INavigationServiceExtension>();
-
-            extension.CloseModal();
+            Current.CloseModal();
         }
     }
 }
