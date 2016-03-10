@@ -33,6 +33,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Forms.Windows", "Sam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Forms", "Sample.Forms\Sample.Forms\Sample.Forms.csproj", "{C3D78EC3-4B3B-4A6C-89A2-439CB2E55947}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{38957A71-A4E6-4350-980A-ABA8DDF294D5}"
+	ProjectSection(SolutionItems) = preProject
+		CreatePackages.ps1 = CreatePackages.ps1
+		MvvmLightNavigationExtension.nuspec = MvvmLightNavigationExtension.nuspec
+		MvvmLightNavigationForms.nuspec = MvvmLightNavigationForms.nuspec
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Export", "Export", "{B5419995-2724-4F72-90DE-4CF5DA7E2984}"
+	ProjectSection(SolutionItems) = preProject
+		Export\MvvmLightNavigationServiceExtension.1.0.0.nupkg = Export\MvvmLightNavigationServiceExtension.1.0.0.nupkg
+		Export\MvvmLightNavigationServiceExtension.Forms.1.0.0.nupkg = Export\MvvmLightNavigationServiceExtension.Forms.1.0.0.nupkg
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
@@ -778,5 +791,6 @@ Global
 		{CC934031-C550-4427-B193-6744696323D2} = {BE4A89A4-A2F4-48BD-AB72-6F27B2F3A34B}
 		{CB4D59C7-AED6-4EA7-B2C9-D6AC039E1C9D} = {BE4A89A4-A2F4-48BD-AB72-6F27B2F3A34B}
 		{C3D78EC3-4B3B-4A6C-89A2-439CB2E55947} = {BE4A89A4-A2F4-48BD-AB72-6F27B2F3A34B}
+		{B5419995-2724-4F72-90DE-4CF5DA7E2984} = {38957A71-A4E6-4350-980A-ABA8DDF294D5}
 	EndGlobalSection
 EndGlobal

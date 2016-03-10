@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>MvvmLightNavigationServiceExtension</id>
+        <version>1.0.0</version>
+        <title>MvvmLight NavigationService Extension</title>
+        <authors>Daniel Hindrikes</authors>
+        <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+        <projectUrl>https://github.com/dhindrik/MvvmLightNavigationExtension</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Extends the navigation service in MvvmLight with a OpenModal method.</description>
+        <summary>MIT license</summary>
+        <releaseNotes>
+         
+        </releaseNotes>
+		<dependencies>
+            <dependency id="MvvmLightLibs" version="5.2.0" />
+        </dependencies>
+       
+    </metadata>
+    <files>
+       
+        <file src="MvvmLightNavigationExtension.Droid\bin\Release\MvvmLightNavigationExtension.dll" target="lib\MonoAndroid10\MvvmLightNavigationExtension.dll" />
+        <file src="MvvmLightNavigationExtension.Droid\bin\Release\MvvmLightNavigationExtension.Droid.dll" target="lib\MonoAndroid10\MvvmLightNavigationExtension.Droid.dll" />
+        
+		<file src="MvvmLightNavigation\MvvmLightNavigation\bin\Release\MvvmLightNavigationExtension.dll" target="lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\MvvmLightNavigationExtension.dll" />
+        
+        <file src="MvvmLightNavigationExtension.iOS\bin\iPhone\Release\MvvmLightNavigationExtension.dll" target="lib\Xamarin.iOS10\MvvmLightNavigationExtension.dll" />
+        <file src="MvvmLightNavigationExtension.iOS\bin\iPhone\Release\MvvmLightNavigationExtension.iOS.dll" target="lib\Xamarin.iOS10\MvvmLightNavigationExtension.iOS.dll" /> 
+    
+    </files>
+</package>
