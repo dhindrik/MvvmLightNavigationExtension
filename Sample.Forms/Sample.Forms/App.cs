@@ -35,7 +35,6 @@ namespace Sample.Forms
 
             navigationPage.PushAsync(new MainView());
 
-            // The root page of your application
             MainPage = navigationPage;
 
         }
