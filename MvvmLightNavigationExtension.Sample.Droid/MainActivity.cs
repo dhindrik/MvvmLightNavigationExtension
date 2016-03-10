@@ -31,6 +31,7 @@ namespace MvvmLightNavigationExtension.Sample.Droid
             if (!_isInitialized)
             {
                 var nav = new MvvmLightNavigationExtension.Droid.NavigationServiceExtension();
+                nav.Initialize();
                 nav.Configure("Page1", typeof(MainActivity));
                 nav.Configure("Page2", typeof(PageActivity));
 
