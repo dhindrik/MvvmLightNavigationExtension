@@ -1,4 +1,11 @@
-﻿using System;
+﻿using Autofac;
+using Autofac.Extras.CommonServiceLocator;
+using GalaSoft.MvvmLight.Views;
+using Microsoft.Practices.ServiceLocation;
+using MvvmLightNavigationExtension;
+using MvvmLightNavigationExtension.Forms;
+using Sample.Forms.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,20 +18,26 @@ namespace Sample.Forms
     {
         public App()
         {
+            var navigationPage = new NavigationPage();
+
+            var navigationService = new NavigationService();
+            navigationService.Initialize(navigationPage.Navigation);
+
+            navigationService.Configure("Main", typeof(MainView));
+            navigationService.Configure("About", typeof(AboutView));
+
+            var builder = new ContainerBuilder();
+            builder.RegisterInstance<INavigationService>(navigationService);
+
+            var container = builder.Build();
+
+            ServiceLocator.SetLocatorProvider(() => new AutofacServiceLocator(container));
+
+            navigationPage.PushAsync(new MainView());
+
             // The root page of your application
-            MainPage = new ContentPage
-            {
-                Content = new StackLayout
-                {
-                    VerticalOptions = LayoutOptions.Center,
-                    Children = {
-                        new Label {
-                            XAlign = TextAlignment.Center,
-                            Text = "Welcome to Xamarin Forms!"
-                        }
-                    }
-                }
-            };
+            MainPage = navigationPage;
+
         }
 
         protected override void OnStart()
