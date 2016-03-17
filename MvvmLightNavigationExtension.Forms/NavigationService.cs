@@ -16,6 +16,7 @@ namespace MvvmLightNavigationExtension.Forms
         public void Initialize(INavigation navigation)
         {
             _navigation = navigation;
+            NavigationServiceExtension.Current = this;
         }
 
         public void Configure(string key, Type type)

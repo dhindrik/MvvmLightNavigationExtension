@@ -1,5 +1,4 @@
-﻿using Sample.Forms.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,13 +8,11 @@ using Xamarin.Forms;
 
 namespace Sample.Forms.Views
 {
-    public partial class AboutView : ContentPage
+    public partial class ModalView : ContentPage
     {
-        public AboutView()
+        public ModalView()
         {
             InitializeComponent();
-
-            BindingContext = new AboutViewModel();
         }
     }
 }

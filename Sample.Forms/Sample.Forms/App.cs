@@ -25,6 +25,7 @@ namespace Sample.Forms
 
             navigationService.Configure("Main", typeof(MainView));
             navigationService.Configure("About", typeof(AboutView));
+            navigationService.Configure("Modal", typeof(ModalView));
 
             var builder = new ContainerBuilder();
             builder.RegisterInstance<INavigationService>(navigationService);
