@@ -34,6 +34,7 @@ namespace MvvmLightNavigationExtension.Sample.Droid
                 nav.Initialize();
                 nav.Configure("Page1", typeof(MainActivity));
                 nav.Configure("Page2", typeof(PageActivity));
+                nav.Configure("Page3", typeof(Page3Activity));
 
                 var builder = new ContainerBuilder();
                 builder.RegisterInstance<INavigationService>(nav);
@@ -59,6 +60,9 @@ namespace MvvmLightNavigationExtension.Sample.Droid
             // and attach an event to it
             _button = FindViewById<Button>(Resource.Id.MyButton);
             _button.SetCommand("Click", ViewModel.Goto);
+
+            _button = FindViewById<Button>(Resource.Id.MyButton2);
+            _button.SetCommand("Click", ViewModel.GotoWithParameter);
 
             _button.Click += _button_Click;
         }

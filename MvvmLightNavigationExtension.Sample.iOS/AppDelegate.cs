@@ -29,6 +29,7 @@ namespace MvvmLightNavigationExtension.Sample.iOS
             nav.Initialize((UINavigationController)Window.RootViewController);
             nav.Configure("Page1", "MainView");
             nav.Configure("Page2", "PageView");
+            nav.Configure("Page3", "Page3View");
 
             var builder = new ContainerBuilder();
             builder.RegisterInstance<INavigationService>(nav);

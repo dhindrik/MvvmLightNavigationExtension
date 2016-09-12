@@ -11,27 +11,27 @@ using UIKit;
 
 namespace MvvmLightNavigationExtension.Sample.iOS
 {
-    [Register ("ViewController")]
-    partial class ViewController
+    [Register ("Page3Controller")]
+    partial class Page3Controller
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton Button2 { get; set; }
+        UIKit.UIButton Close { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton Navigate { get; set; }
+        UIKit.UITextField Text { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
-            if (Button2 != null) {
-                Button2.Dispose ();
-                Button2 = null;
+            if (Close != null) {
+                Close.Dispose ();
+                Close = null;
             }
 
-            if (Navigate != null) {
-                Navigate.Dispose ();
-                Navigate = null;
+            if (Text != null) {
+                Text.Dispose ();
+                Text = null;
             }
         }
     }

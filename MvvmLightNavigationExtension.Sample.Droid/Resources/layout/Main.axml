@@ -8,4 +8,10 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Navigate" />
+
+  <Button
+        android:id="@+id/MyButton2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Navigate with parameter" />
 </LinearLayout>

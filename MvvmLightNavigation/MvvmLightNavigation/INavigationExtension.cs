@@ -9,6 +9,7 @@ namespace MvvmLightNavigationExtension
     public interface INavigationServiceExtension
     {
         void OpenModal(string key);
+        void OpenModal(string key, object parameter);
         void CloseModal();
     }
 }

@@ -17,6 +17,11 @@ namespace MvvmLightNavigationExtension
             Current.OpenModal(key);
         }
 
+        public static void OpenModal(this INavigationService navigationService, string key, object parameter)
+        {
+            Current.OpenModal(key, parameter);
+        }
+
         public static void CloseModal(this INavigationService navigationService)
         {
             Current.CloseModal();

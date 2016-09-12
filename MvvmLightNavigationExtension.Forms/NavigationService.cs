@@ -83,5 +83,23 @@ namespace MvvmLightNavigationExtension.Forms
             
             _navigation.PushModalAsync(page);
         }
+
+        public void OpenModal(string key, object parameter)
+        {
+            var type = _pages[key];
+
+            Page page = null;
+
+            if (parameter != null)
+            {
+                page = Activator.CreateInstance(type, parameter) as Page;
+            }
+            else
+            {
+                page = Activator.CreateInstance(type) as Page;
+            }
+
+            _navigation.PushModalAsync(page);
+        }
     }
 }

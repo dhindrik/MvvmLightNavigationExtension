@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>MvvmLightNavigationServiceExtension.Forms</id>
-        <version>1.0.1</version>
+        <version>1.2.0</version>
         <title>MvvmLight NavigationService Extension Xamarin Forms</title>
         <authors>Daniel Hindrikes</authors>
         <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
@@ -11,7 +11,8 @@
         <description>MvvmLight Navigation service for Xamarin.Forms. NavigationService is also extendend with OpenModal method.</description>
         <summary>MIT license</summary>
         <releaseNotes>
-         1.0.1 - Fixed bug related to modals.
+          1.0.1 - Fixed bug related to modals.
+          1.2.1 - Open modals with parameter.
         </releaseNotes>
 		<dependencies>
             <dependency id="Xamarin.Forms" version="2.1.0.6526" />

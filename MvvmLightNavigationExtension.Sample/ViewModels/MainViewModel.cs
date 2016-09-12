@@ -24,5 +24,17 @@ namespace MvvmLightNavigationExtension.Sample.ViewModels
                 });
             }
         }
+
+        public RelayCommand GotoWithParameter
+        {
+            get
+            {
+                return new RelayCommand(() =>
+                {
+                    var navigation = ServiceLocator.Current.GetInstance<INavigationService>();
+                    navigation.OpenModal("Page3", "hej");
+                });
+            }
+        }
     }
 }

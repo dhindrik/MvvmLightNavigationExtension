@@ -67,11 +67,14 @@ namespace MvvmLightNavigationExtension.Sample.Droid
 			// aapt resource value: 0x7f050000
 			public const int MyButton = 2131034112;
 			
-			// aapt resource value: 0x7f050002
-			public const int close = 2131034114;
-			
 			// aapt resource value: 0x7f050001
-			public const int textView1 = 2131034113;
+			public const int MyButton2 = 2131034113;
+			
+			// aapt resource value: 0x7f050003
+			public const int close = 2131034115;
+			
+			// aapt resource value: 0x7f050002
+			public const int textView1 = 2131034114;
 			
 			static Id()
 			{

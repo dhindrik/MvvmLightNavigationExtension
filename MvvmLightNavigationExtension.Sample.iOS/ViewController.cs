@@ -22,6 +22,7 @@ namespace MvvmLightNavigationExtension.Sample.iOS
             ViewModel = new MainViewModel();
 
             Navigate.SetCommand("TouchUpInside", ViewModel.Goto);
+            Button2.SetCommand("TouchUpInside", ViewModel.GotoWithParameter);
 
             Navigate.TouchUpInside += Navigate_TouchUpInside;
         }

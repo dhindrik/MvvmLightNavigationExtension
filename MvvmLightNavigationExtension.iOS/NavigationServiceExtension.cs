@@ -42,6 +42,20 @@ namespace MvvmLightNavigationExtension.iOS
             _pageKeys.Add(key, storyboardId);
         }
 
-        
+        public void OpenModal(string key, object parameter)
+        {
+            var navigationController = UIApplication.SharedApplication.Windows[0].RootViewController;
+
+            var viewController = navigationController.Storyboard.InstantiateViewController(_pageKeys[key]);
+
+            var casted = viewController as ControllerBase;
+
+            if(casted != null)
+            {
+                casted.NavigationParameter = parameter;
+            }
+
+            navigationController.PresentModalViewController(viewController, true);
+        }
     }
 }

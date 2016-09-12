@@ -89,6 +89,10 @@
     <None Include="app.config" />
     <None Include="GettingStarted.Xamarin" />
     <None Include="Info.plist" />
+    <Compile Include="Page3Controller.cs" />
+    <Compile Include="Page3Controller.designer.cs">
+      <DependentUpon>Page3Controller.cs</DependentUpon>
+    </Compile>
     <Compile Include="PageController.cs" />
     <Compile Include="PageController.designer.cs">
       <DependentUpon>PageController.cs</DependentUpon>
