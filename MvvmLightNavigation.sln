@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Droid", "MvvmLightNa
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Forms", "Forms", "{BE4A89A4-A2F4-48BD-AB72-6F27B2F3A34B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvvmLightNavigationExtension.Forms", "MvvmLightNavigationExtension.Forms\MvvmLightNavigationExtension.Forms.csproj", "{73A56B39-B565-4D02-91F8-BF4224B36BEB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvvmLight.Extension.Forms", "MvvmLightNavigationExtension.Forms\MvvmLight.Extension.Forms.csproj", "{73A56B39-B565-4D02-91F8-BF4224B36BEB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Forms.Droid", "Sample.Forms\Sample.Forms.Droid\Sample.Forms.Droid.csproj", "{8CA2A872-FCB3-4058-8681-54C8C9669A69}"
 EndProject
@@ -36,6 +36,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{38957A71-A4E6-4350-980A-ABA8DDF294D5}"
 	ProjectSection(SolutionItems) = preProject
 		CreatePackages.ps1 = CreatePackages.ps1
+		MvvmLight.XamarinForms.nuspec = MvvmLight.XamarinForms.nuspec
 		MvvmLightNavigationExtension.nuspec = MvvmLightNavigationExtension.nuspec
 		MvvmLightNavigationForms.nuspec = MvvmLightNavigationForms.nuspec
 	EndProjectSection

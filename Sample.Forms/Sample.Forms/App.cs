@@ -2,8 +2,8 @@
 using Autofac.Extras.CommonServiceLocator;
 using GalaSoft.MvvmLight.Views;
 using Microsoft.Practices.ServiceLocation;
+using MvvmLight.XamarinForms;
 using MvvmLightNavigationExtension;
-using MvvmLightNavigationExtension.Forms;
 using Sample.Forms.Views;
 using System;
 using System.Collections.Generic;
@@ -21,7 +21,7 @@ namespace Sample.Forms
             var navigationPage = new NavigationPage();
 
             var navigationService = new NavigationService();
-            navigationService.Initialize(navigationPage.Navigation);
+            navigationService.Initialize(navigationPage);
 
             navigationService.Configure("Main", typeof(MainView));
             navigationService.Configure("About", typeof(AboutView));
@@ -29,6 +29,7 @@ namespace Sample.Forms
 
             var builder = new ContainerBuilder();
             builder.RegisterInstance<INavigationService>(navigationService);
+            builder.RegisterInstance<IDialogService>(new DialogService());
 
             var container = builder.Build();
 

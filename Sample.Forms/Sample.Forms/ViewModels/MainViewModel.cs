@@ -23,6 +23,18 @@ namespace Sample.Forms.ViewModels
                     navigation.NavigateTo("About");
                 });
             }
-        } 
+        }
+
+        public RelayCommand Dialog
+        {
+            get
+            {
+                return new RelayCommand(async() =>
+                {
+                    var dialog = ServiceLocator.Current.GetInstance<IDialogService>();
+                    await dialog.ShowMessage("Hi!", "Whats up?");
+                });
+            }
+        }
     }
 }

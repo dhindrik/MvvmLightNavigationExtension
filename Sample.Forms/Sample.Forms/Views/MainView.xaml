@@ -4,5 +4,6 @@
              x:Class="Sample.Forms.Views.MainView">
   <StackLayout>
     <Button Command="{Binding About}" Text="Show About" />
+		<Button Command="{Binding Dialog}" Text="Show Dialog" />
   </StackLayout>
 </ContentPage>

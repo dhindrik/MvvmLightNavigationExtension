@@ -1,4 +1,5 @@
 ﻿using GalaSoft.MvvmLight.Views;
+using MvvmLightNavigationExtension;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,17 +7,22 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace MvvmLightNavigationExtension.Forms
+namespace MvvmLight.XamarinForms
 {
     public class NavigationService : INavigationService, INavigationServiceExtension
     {
+        internal static NavigationPage NavigationPage { get; private set; }
+
         private INavigation _navigation;
         private Dictionary<string, Type> _pages = new Dictionary<string, Type>();
 
-        public void Initialize(INavigation navigation)
+        private Stack<string> _navigationStack = new Stack<string>();
+        public void Initialize(NavigationPage navigationPage)
         {
-            _navigation = navigation;
+            _navigation = navigationPage.Navigation;
             NavigationServiceExtension.Current = this;
+
+            NavigationPage = navigationPage;
         }
 
         public void Configure(string key, Type type)
@@ -37,7 +43,7 @@ namespace MvvmLightNavigationExtension.Forms
 
         public string CurrentPageKey
         {
-            get; private set;
+            get { return _navigationStack.Peek(); }
         }
 
         public void CloseModal()
@@ -47,6 +53,7 @@ namespace MvvmLightNavigationExtension.Forms
 
         public void GoBack()
         {
+            _navigationStack.Pop();
             _navigation.PopAsync();
         }
 
@@ -72,7 +79,7 @@ namespace MvvmLightNavigationExtension.Forms
 
             _navigation.PushAsync(page);
 
-            CurrentPageKey = pageKey;  
+            _navigationStack.Push(pageKey); 
         }
 
         public void OpenModal(string key)
