@@ -39,6 +39,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{38957A71
 		MvvmLight.XamarinForms.nuspec = MvvmLight.XamarinForms.nuspec
 		MvvmLightNavigationExtension.nuspec = MvvmLightNavigationExtension.nuspec
 		MvvmLightNavigationForms.nuspec = MvvmLightNavigationForms.nuspec
+		Nuget.config = Nuget.config
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Export", "Export", "{B5419995-2724-4F72-90DE-4CF5DA7E2984}"
