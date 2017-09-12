@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <RootNamespace>MvvmLightNavigationExtension</RootNamespace>
+    <AssemblyName>MvvmLightNavigationExtension</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MvvmLightLibsStd10" Version="5.4.0.1-alpha" />
+  </ItemGroup>
+
+</Project>

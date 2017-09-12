@@ -21,7 +21,7 @@ namespace MvvmLightNavigationExtension.Sample.iOS
         {
             base.ViewDidLoad();
 
-            ViewModel = new PageViewModel();
+            ViewModel = SimpleIoc.Default.GetInstance<PageViewModel>();
 
             Close.SetCommand("TouchUpInside", ViewModel.Close);
         }

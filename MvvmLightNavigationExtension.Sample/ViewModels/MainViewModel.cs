@@ -1,26 +1,32 @@
-﻿using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Command;
-using GalaSoft.MvvmLight.Views;
-using Microsoft.Practices.ServiceLocation;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MvvmLightNavigationExtension;
+using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Views;
 
 namespace MvvmLightNavigationExtension.Sample.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
+        private INavigationService _navigationService;
+
+        public MainViewModel(INavigationService navigationService)
+        {
+            _navigationService = navigationService;
+        }
+
         public RelayCommand Goto
         {
             get
             {
                 return new RelayCommand(() =>
                 {
-                    var navigation = ServiceLocator.Current.GetInstance<INavigationService>();
-                    navigation.OpenModal("Page2");
+                    _navigationService.OpenModal("Page2");
                 });
             }
         }
@@ -31,8 +37,7 @@ namespace MvvmLightNavigationExtension.Sample.ViewModels
             {
                 return new RelayCommand(() =>
                 {
-                    var navigation = ServiceLocator.Current.GetInstance<INavigationService>();
-                    navigation.OpenModal("Page3", "hej");
+                    _navigationService.OpenModal("Page3", "hej");
                 });
             }
         }

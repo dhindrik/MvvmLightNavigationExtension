@@ -1,8 +1,8 @@
 ﻿using Autofac;
-using Autofac.Extras.CommonServiceLocator;
 using Foundation;
+using GalaSoft.MvvmLight.Ioc;
 using GalaSoft.MvvmLight.Views;
-using Microsoft.Practices.ServiceLocation;
+using MvvmLightNavigationExtension.Sample.ViewModels;
 using UIKit;
 
 namespace MvvmLightNavigationExtension.Sample.iOS
@@ -14,6 +14,8 @@ namespace MvvmLightNavigationExtension.Sample.iOS
     public class AppDelegate : UIApplicationDelegate
     {
         // class-level declarations
+
+            public static IContainer Container { get; private set; }
 
         public override UIWindow Window
         {
@@ -31,13 +33,11 @@ namespace MvvmLightNavigationExtension.Sample.iOS
             nav.Configure("Page2", "PageView");
             nav.Configure("Page3", "Page3View");
 
-            var builder = new ContainerBuilder();
-            builder.RegisterInstance<INavigationService>(nav);
-            builder.RegisterInstance<INavigationServiceExtension>(nav);
+            SimpleIoc.Default.Register<INavigationService>(() => nav);
+            SimpleIoc.Default.Register<INavigationService>(() => nav);
 
-            var container = builder.Build();
-
-            ServiceLocator.SetLocatorProvider(() => new AutofacServiceLocator(container));
+            SimpleIoc.Default.Register<MainViewModel>();
+            SimpleIoc.Default.Register<PageViewModel>();
 
             return true;
         }

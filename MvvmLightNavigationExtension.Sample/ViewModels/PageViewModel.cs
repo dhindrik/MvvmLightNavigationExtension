@@ -1,7 +1,6 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Views;
-using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,14 +11,20 @@ namespace MvvmLightNavigationExtension.Sample.ViewModels
 {
     public class PageViewModel : ViewModelBase
     {
+        private INavigationService _navigationService;
+
+        public PageViewModel(INavigationService navigationService)
+        {
+            _navigationService = navigationService;
+        }
+
         public RelayCommand Close
         {
             get
             {
                 return new RelayCommand(() =>
                 {
-                    var navigation = ServiceLocator.Current.GetInstance<INavigationService>();
-                    navigation.CloseModal();
+                    _navigationService.CloseModal();
                 });
             }
         }

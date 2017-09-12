@@ -4,6 +4,7 @@ using MvvmLightNavigationExtension.Sample.ViewModels;
 using System;
 using UIKit;
 using GalaSoft.MvvmLight.Helpers;
+using GalaSoft.MvvmLight.Ioc;
 
 namespace MvvmLightNavigationExtension.Sample.iOS
 {
@@ -20,7 +21,7 @@ namespace MvvmLightNavigationExtension.Sample.iOS
         {
             base.ViewDidLoad();
 
-            ViewModel = new PageViewModel();
+            ViewModel = SimpleIoc.Default.GetInstance<PageViewModel>();
 
             Text.Text = "Parameter: " + NavigationParameter.ToString();
 
