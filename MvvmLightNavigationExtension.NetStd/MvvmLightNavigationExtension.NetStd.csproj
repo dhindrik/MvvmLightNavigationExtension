@@ -4,6 +4,18 @@
     <TargetFramework>netstandard1.0</TargetFramework>
     <RootNamespace>MvvmLightNavigationExtension</RootNamespace>
     <AssemblyName>MvvmLightNavigationExtension</AssemblyName>
+    <Version>2.0.1-pre1</Version>
+    <Description>Extends the navigation service in MvvmLight with a OpenModal method.</Description>
+    <Product>MvvmLight NavigationService Extension</Product>
+    <Company />
+    <Authors>Daniel Hindrikes</Authors>
+    <PackageReleaseNotes>Converted to .net standard</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/dhindrik/MvvmLightNavigationExtension</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/dhindrik/MvvmLightNavigationExtension</RepositoryUrl>
+    <RepositoryType>GIT</RepositoryType>
+    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <Copyright>Daniel Hindrikes</Copyright>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>

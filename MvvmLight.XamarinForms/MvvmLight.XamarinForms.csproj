@@ -5,6 +5,19 @@
       <PackageTargetFallback>
           portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20
       </PackageTargetFallback>
+      <Version>2.0.1-pre1</Version>
+      <Authors>Daniel Hindrikes</Authors>
+      <Company />
+      <Product>MvvmLight for Xamarin.Forms</Product>
+      <Description>INavigationService and IDialogService implemention for Xamarin.Forms</Description>
+      <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+      <Copyright>Daniel Hindrikes</Copyright>
+      <PackageProjectUrl>https://github.com/dhindrik/MvvmLightNavigationExtension</PackageProjectUrl>
+      <RepositoryUrl>https://github.com/dhindrik/MvvmLightNavigationExtension</RepositoryUrl>
+      <RepositoryType>GIT</RepositoryType>
+      <PackageTags>Xamarin</PackageTags>
+      <PackageReleaseNotes>Converted to .NET standard</PackageReleaseNotes>
+      <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
