@@ -12,6 +12,7 @@ using Android.Widget;
 using MvvmLightNavigationExtension.Sample.ViewModels;
 using GalaSoft.MvvmLight.Helpers;
 using GalaSoft.MvvmLight.Views;
+using GalaSoft.MvvmLight.Ioc;
 
 namespace MvvmLightNavigationExtension.Sample.Droid
 {
@@ -29,7 +30,7 @@ namespace MvvmLightNavigationExtension.Sample.Droid
 
             if(ViewModel == null)
             {
-                ViewModel = new PageViewModel();
+                ViewModel = SimpleIoc.Default.GetInstance<PageViewModel>();
             }
 
             var button = FindViewById<Button>(Resource.Id.close);

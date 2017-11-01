@@ -26,8 +26,6 @@ namespace MvvmLightNavigationExtension.Sample.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::GalaSoft.MvvmLight.Resource.String.ApplicationName = global::MvvmLightNavigationExtension.Sample.Droid.Resource.String.ApplicationName;
-			global::GalaSoft.MvvmLight.Resource.String.Hello = global::MvvmLightNavigationExtension.Sample.Droid.Resource.String.Hello;
 			global::MvvmLightNavigationExtension.Droid.Resource.String.ApplicationName = global::MvvmLightNavigationExtension.Sample.Droid.Resource.String.ApplicationName;
 			global::MvvmLightNavigationExtension.Droid.Resource.String.Hello = global::MvvmLightNavigationExtension.Sample.Droid.Resource.String.Hello;
 		}

@@ -12,7 +12,7 @@ using Android.Widget;
 using GalaSoft.MvvmLight.Helpers;
 using GalaSoft.MvvmLight.Views;
 using MvvmLightNavigationExtension.Sample.ViewModels;
-using Microsoft.Practices.ServiceLocation;
+using GalaSoft.MvvmLight.Ioc;
 
 namespace MvvmLightNavigationExtension.Sample.Droid
 {
@@ -25,8 +25,7 @@ namespace MvvmLightNavigationExtension.Sample.Droid
         {
             get
             {
-                return (NavigationService)ServiceLocator.Current
-                    .GetInstance<INavigationService>();
+                return (NavigationService)SimpleIoc.Default.GetInstance<INavigationService>();
             }
         }
 
@@ -38,7 +37,7 @@ namespace MvvmLightNavigationExtension.Sample.Droid
 
             if (ViewModel == null)
             {
-                ViewModel = new PageViewModel();
+                ViewModel = SimpleIoc.Default.GetInstance<PageViewModel>();
             }
 
             var text = FindViewById<TextView>(Resource.Id.textView1);

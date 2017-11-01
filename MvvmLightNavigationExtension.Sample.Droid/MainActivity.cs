@@ -5,12 +5,10 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Autofac;
 using GalaSoft.MvvmLight.Views;
-using Microsoft.Practices.ServiceLocation;
-using Autofac.Extras.CommonServiceLocator;
 using MvvmLightNavigationExtension.Sample.ViewModels;
 using GalaSoft.MvvmLight.Helpers;
+using GalaSoft.MvvmLight.Ioc;
 
 namespace MvvmLightNavigationExtension.Sample.Droid
 {
@@ -36,17 +34,15 @@ namespace MvvmLightNavigationExtension.Sample.Droid
                 nav.Configure("Page2", typeof(PageActivity));
                 nav.Configure("Page3", typeof(Page3Activity));
 
-                var builder = new ContainerBuilder();
-                builder.RegisterInstance<INavigationService>(nav);
-                builder.RegisterInstance<INavigationServiceExtension>(nav);
+                SimpleIoc.Default.Register<INavigationService>(() => nav);
+                SimpleIoc.Default.Register<INavigationServiceExtension>(() => nav);
 
-                var container = builder.Build();
-
-                ServiceLocator.SetLocatorProvider(() => new AutofacServiceLocator(container));
+                SimpleIoc.Default.Register<MainViewModel>();
+                SimpleIoc.Default.Register<PageViewModel>();
 
                 _isInitialized = true;
 
-                ViewModel = new MainViewModel();
+                ViewModel = SimpleIoc.Default.GetInstance<MainViewModel>();
             }
 
 
